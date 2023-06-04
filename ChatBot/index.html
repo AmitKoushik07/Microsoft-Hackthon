@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot Conversation</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<header id="header">
+  <nav>
+    <div class="logo"><img src="images/icon/logo.png" alt="logo"></div>
+    <ul>
+      <li><a class="active" href="#head">Home</a></li>
+      <li><a href="#Subjects">Analysis</a></li>
+      <li><a href="#budget">Budget</a></li>
+      <li><a href="#account">Account</a></li>
+      <li><a href="#goal">Goals</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+
+
+    <a class="get-started" href="login.html">Get Started</a>
+
+    </div>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: #FFF;
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      header {
+        height: 21vh;
+      }
+
+      .black {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      nav {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        top: 0;
+        position: fixed;
+        display: flex;
+        width: 100%;
+        z-index: 1000;
+        background: rgb(125, 214, 249);
+        justify-content: space-around;
+        transition: 1.5s;
+        align-items: center;
+        /* font-weight: bold;  Added font weight */
+        font-size: 18px;
+        /* Increased font size */
+      }
+
+      nav ul {
+        display: flex;
+        align-items: center;
+      }
+
+      nav ul li {
+        list-style: none;
+        margin: 5px 10px;
+      }
+
+      nav ul li a {
+        padding: 2px 10px;
+        color: #fff;
+        cursor: pointer;
+        transition: .5s;
+        text-decoration: none;
+        font-size: 25 px;
+      }
+
+      nav ul li a:hover {
+        color: #fff;
+        border-radius: 15px;
+        background: #0077b6;
+
+      }
+
+      .active {
+        color: #fff;
+        border-radius: 5px;
+      }
+
+      .srch {
+        padding: 2px 10px;
+        display: flex;
+        border: 1px solid;
+        border-radius: 20px;
+      }
+
+      .srch img {
+        width: 25px;
+        cursor: pointer;
+      }
+
+      .srch .search {
+        outline: none;
+        border: none;
+        background: transparent;
+      }
+
+      .get-started {
+        margin-left: 50px;
+        padding: 5px 20px;
+        border: 2px solid #0077b6;
+        border-radius: 20px;
+        text-decoration: none;
+        transition: .5s;
+        background-color: #0077b6;
+        color: #fff;
+        font-weight: bold;
+        /* Added font weight */
+        font-size: 16px;
+        /* Increased font size */
+      }
+
+      .get-started:hover {
+        color: #0077b6;
+        background: #fff;
+      }
+
+      .logo img {
+        width: 120px;
+        cursor: pointer;
+        transition: all 1s;
+      }
+
+      a,
+      button {
+        float: left;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        color: #0077b6;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+      }
+
+      .head-container {
+        margin-top: 245px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+      }
+    </style>
+</header>
+
+<body>
+  <div class="container">
+    <div class="chat-container">
+      <div class="chat-header">Chatbot</div>
+      <div class="chat-log" id="chatlog">
+        <div class="message-container">
+          <div class="message bot">Hello! Welcome to Finance Tracker. How can I assist you today?</div>
+        </div>
+      </div>
+      <div class="user-input">
+        <div class="input-group">
+          <input type="text" id="userInput" class="form-control" placeholder="Type your message...">
+          <div class="input-group-append">
+            <button id="sendBtn" class="btn send-button">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
